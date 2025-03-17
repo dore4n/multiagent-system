@@ -1,0 +1,8 @@
+flask
+requests
+python-dotenv
+langchain
+langchain-community
+langchain-groq
+openai
+markdown2

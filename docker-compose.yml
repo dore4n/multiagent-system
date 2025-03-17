@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  search_info:
+    build: .
+    container_name: search_info
+    command: ["python", "agents/search_info.py"]
+    ports:
+      - "5000:5000"
+    networks:
+      - my_network
+
+  report_info:
+    build: .
+    container_name: report_info
+    command: ["python", "agents/report_info.py"]
+    ports:
+      - "5001:5001"
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge
